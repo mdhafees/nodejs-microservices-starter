@@ -10,8 +10,17 @@ router.get('/login', (req, res) => {
   });
 
   router.post('/login', passport.authenticate('local', { session: false }), (req, res) => {
-    const token = jwt.sign({ id: req.user.id }, 'JWT_SECRET_KEY', { expiresIn: '1h' });
-    res.json(token);
+    const token = jwt.sign({ id: req.user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+    // res.json(token);
+    let response = {
+      statusCode : 0,
+      statusMessage: 'Signed in with other email',
+      data: {
+        username: req.body.username,
+        token: token
+      }
+  }
+  res.json(response)
 });
 
 

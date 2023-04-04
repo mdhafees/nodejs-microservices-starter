@@ -1,4 +1,6 @@
 const passport = require('passport');
+// add any passprt type auth here
+const oauth2Strategy = require('./uaepass/uaepass_auth');
 const LocalStrategy = require('./local/local_auth');
 // const User = require('../models/user');
 
@@ -18,5 +20,7 @@ passport.deserializeUser(async (user, done) => {
 });
 
 passport.use(LocalStrategy);
+passport.use(oauth2Strategy);
+
 
 module.exports = passport;

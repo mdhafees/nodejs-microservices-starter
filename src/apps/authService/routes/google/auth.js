@@ -32,7 +32,13 @@ router.get('/response', async (req, res) => {
         // console.log('Access token:', tokens.access_token);
         // console.log('Refresh token:', tokens.refresh_token);
         // console.log('User scopes:', scopes, data );
-        res.send('Signed in with Google! user data ' + JSON.stringify(data));
+        // res.send('Signed in with Google! user data ' + JSON.stringify(data));
+        let response = {
+            statusCode : 0,
+            statusMessage: 'Signed in with Google!',
+            data: data
+        }
+        res.json(response)
     } catch (err) {
         console.error(err);
         res.status(500).send('Failed to retrieve access token');

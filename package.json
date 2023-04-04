@@ -20,7 +20,9 @@
     "googleapis": "^114.0.0",
     "jsonwebtoken": "^9.0.0",
     "passport": "^0.6.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "passport-oauth2": "^1.7.0",
+    "querystring": "^0.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.18.6",
