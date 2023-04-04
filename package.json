@@ -7,7 +7,7 @@
   "author": "Hafees <appusf@gmail.com>",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
-    "build": "babel src -d dist",
+    "build": "babel src -d dist && copyfiles -u 1 \"src/**/*.json\" dist",
     "serve": "node dist/server.js",
     "start:dev": "npm run build && nodemon dist/server.js",
     "start:prod": "npm run build && npm run serve"
@@ -27,6 +27,8 @@
     "@babel/core": "^7.18.6",
     "@babel/node": "^7.18.6",
     "@babel/preset-env": "^7.18.6",
+    "copyfiles": "^2.4.1",
+    "cpy-cli": "^4.2.0",
     "nodemon": "^2.0.18"
   }
 }
