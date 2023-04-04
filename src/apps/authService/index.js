@@ -1,8 +1,8 @@
-import createApp from "../app";
+import createApp from "../../app";
 import googleAuth from "./routes/google/auth";
 import localAuth from "./routes/local/auth";
 import session from "express-session"
-import passport from "../config/auth/passportConfig";
+import passport from "../../config/auth/passportConfig";
 import dotenv from 'dotenv';
 
 dotenv.config();

@@ -1,5 +1,5 @@
 import express from "express";
-import { oauthUaePass } from "../../../config/auth/uaepass/uaepass_auth"
+import { oauthUaePass } from "../../../../config/auth/uaepass/uaepass_auth"
 
 const router = express.Router();
 

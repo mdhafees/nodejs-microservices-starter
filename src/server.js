@@ -1,6 +1,6 @@
-import middlewareApp from "./middlewareApp";
-import authService from "./authService";
-import serviceHaf from "./serviceHaf";
+import middlewareApp from "./apps/middlewareApp";
+import authService from "./apps/authService";
+import serviceHaf from "./apps/serviceHaf";
 
 middlewareApp();
 authService();

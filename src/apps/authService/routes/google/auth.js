@@ -1,4 +1,4 @@
-import oauth2Client from "../../../config/auth/google/google_auth"
+import oauth2Client from "../../../../config/auth/google/google_auth"
 import { google } from "googleapis"
 
 import express from "express";

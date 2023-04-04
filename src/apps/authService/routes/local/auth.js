@@ -1,6 +1,6 @@
 import express from "express";
 const passport = require('passport');
-// import { passport } from "../../../config/auth/local/local_auth"
+// import { passport } from "../../../../config/auth/local/local_auth"
 const jwt = require('jsonwebtoken');
 
 const router = express.Router();
